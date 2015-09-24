@@ -18,7 +18,9 @@
   },
   "deploy": [
     // Names of contracts that should be deployed to the network.
-    "Example"
+    "Proxy",
+    "Controller",
+    "Target"
   ],
   "rpc": {
     // Default RPC configuration.
