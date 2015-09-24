@@ -44,7 +44,7 @@
         "type": "function"
       }
     ],
-    "address": "0x7898405c5b77f9eb7246c6319efcbba7ffbf311e"
+    "address": "0x1a84d681db0196938762831dc99ab509e2f9373a"
   },
   "Proxy": {
     "source": "/Users/peterbb/proxies/contracts/Proxy.sol",
@@ -60,7 +60,7 @@
         "type": "constructor"
       }
     ],
-    "address": "0xcae734753f647e687b1719fb33874f1ef7210c74"
+    "address": "0xedf42b3529ad12710035ab5a208f7c7a85a43156"
   },
   "Target": {
     "source": "/Users/peterbb/proxies/contracts/Target.sol",
@@ -91,6 +91,6 @@
         "type": "function"
       }
     ],
-    "address": "0xe84501646ff55d6c9893793029a401a4b9111616"
+    "address": "0x7c258ef539d0dcb94870d157d4d2cf900ed38853"
   }
 }
