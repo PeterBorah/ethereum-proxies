@@ -20,4 +20,24 @@ contract('Proxy', function(accounts) {
     }).catch(done)
     }).catch(done)
   });
+
+  it("should forward function calls", function(done) {
+    var controller = Controller.at(Controller.deployed_address);
+    var target = Target.at(Target.deployed_address);
+
+    Proxy.new(controller.address).
+      then(function(proxy) {
+        var fake_target = Target.at(proxy.address);
+
+        controller.set_parameters(target.address, 0).
+          then(function() { return fake_target.a_function(42) }).
+          then(function() { return target.function_called.call() }).
+          then(function(result) { assert.equal(result, true) }).
+          then(function() { return target.argument.call() }).
+          then(function(result) {
+            assert.equal(result, 42);
+            done();
+        }).catch(done);
+    }).catch(done);
+  });
 });
