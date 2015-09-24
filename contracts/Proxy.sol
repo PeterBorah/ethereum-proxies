@@ -1,16 +1,8 @@
-import "Controller";
-
 contract Proxy {
-  Controller controller;
-
-  function Proxy(Controller _controller) {
-    controller = _controller;
+  function execute(address _to, uint _value, bytes _data) returns (bytes32 _r) {
+    _to.call.value(_value)(_data);
   }
 
   function() {
-    address target = controller.target();
-    uint amount = controller.amount();
-
-    target.call.value(amount)(msg.data);
   }
 }

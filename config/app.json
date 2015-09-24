@@ -19,7 +19,6 @@
   "deploy": [
     // Names of contracts that should be deployed to the network.
     "Proxy",
-    "Controller",
     "Target"
   ],
   "rpc": {
